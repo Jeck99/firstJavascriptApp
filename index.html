@@ -9,14 +9,88 @@
 
 <body>
     <script>
-
-        for (var i = 1; i <= 10; i++) {
-            for (var j = 1; j <= 10; j++) {
-                console.log(i*j);
+        // אתגר - צרו פונקציה אשר קולטת
+        //  מהמשתמש חמישה מספרים ומחשבת
+        //  את המינימום והמקסימום מביניהם ומדפיסה אותו. 
+        function getMaxNumber() {
+            var temp = 0;
+            for (var i = 0; i < 5; i++) {
+                var num = +prompt('enter a number');
+                if (num > temp) {
+                    temp = num
+                }
             }
+            return temp;
+        }
+        function getMinNumber() {
+            var temp = Number.MAX_SAFE_INTEGER;
+            for (var i = 0; i < 5; i++) {
+                var num = +prompt('enter a number');
+                if (num < temp) {
+                    temp = num
+                }
+            }
+            return temp;
+        }
+        function printMaxAndMinNumbers() {
+            var maxNumber = getMaxNumber()
+            var minNumber = getMinNumber()
+            console.log("maxNumber:" + maxNumber + ",minNumber:" + minNumber);
         }
 
-        console.log(j);
+
+
+
+
+
+
+
+
+
+// function printMyName() {
+//             console.log("jacob");
+//         }
+//         printMyName()
+//         function getMyName() {
+//             return "jacob"
+//         }
+//         var myName = "jacob"
+//         var myName = getMyName()
+
+//         function sum(firstNumber, secondNumber) {
+//             return firstNumber + secondNumber;
+//         }
+//         var mySum = sum(5, 3)
+
+//         function sumUserNumbers(){
+//             return sum(+prompt(""),+prompt(""))
+//         }
+        // var max = 0;
+        // var min = 0;
+        // for (var i = 0; i < 10; i--) {
+        //     console.log("gdhfghd");
+        //     var numFromUser = +prompt('enter a number')
+        //     if (numFromUser < 1) {
+        //         break;
+        //     }
+        //     else {
+        //         if(numFromUser>max){
+        //             max=numFromUser
+        //         }
+        //         else if(numFromUser<min){
+
+        //         }
+        //     }
+        // }
+        // console.log(max);
+        // console.log(min);
+        // for (var i = 1; i <= 10; i++) {
+        //     for (var j = 1; j <= 10; j++) {
+        //         console.log(i*j);
+        //     }
+        // }
+
+        // console.log(j);
 
 
 
