@@ -9,7 +9,61 @@
 
 <body>
     <script>
-        
+        //objects
+        function changeStringIndexEven(strParam){
+            var newString='';
+            for(var i=0;i<strParam.length;i++){
+                if(i%2==0){
+                    newString=newString + "2"
+                }
+                else{
+                    newString=newString + strParam[i]
+                }
+            }
+            return newString;
+        }
+        console.log(changeStringIndexEven("frozen"));//"f2o2e2"
+
+
+
+
+
+        // function getNewStringWithI(strParam){
+        //     var newStr='';
+        //     for(var i=0;i<strParam.length;i++){
+        //         newStr = newStr + strParam[i] +i
+        //     }
+        //     return newStr;
+        // }
+        // console.log(getNewStringWithI("say my name"));
+
+
+
+
+        // var myString = "hello there";
+        // myString.length; //11
+        // var indexOfO= myString.indexOf("o") //4
+        // var indexOfEr= myString.indexOf("e") //1
+        // var indexOfGh= myString.indexOf("gh") //-1
+
+        // var indexOfO= myString.lastIndexOf("o") //4
+        // var indexOfEr= myString.lastIndexOf("e") //10
+
+        // var myUpperString = myString.toUpperCase() //'HELLO THERE'
+        // var myLowerString = myString.toLowerCase() //"hello there"
+
+        // var mySubStr = myString.substr(1,4) //ello
+        // var mySubString = myString.substring(1,4) //ell
+
+
+
+
+
+
+
+
+
+
         // function changeArrays(firstArray,secondArray){
         //     if(firstArray.length == secondArray.length){
         //         var tempArray = firstArray;
