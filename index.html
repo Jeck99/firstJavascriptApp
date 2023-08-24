@@ -10,19 +10,115 @@
 <body>
     <script>
         //objects
-        var door = {
-        height:2,
-        width:0.5,
-        color:"black"
-    }
+        function createObject(){
+            var newObject ={};
+            var counterFromUser = +prompt("how many fields?")
+            for(var i=0;i<counterFromUser;i++){
+                newObject[prompt("enter key")] =prompt("enter value");
+            }
+            return newObject
+        }
 
-    var keyFromUser = prompt("enter a key");
-    console.log(door[keyFromUser]);
-    var valueFromUser = prompt("enter new value");
-    door[keyFromUser] = valueFromUser;
-    console.log(door[keyFromUser]);
-    door.opicty = 0.1;
-    console.log(door);
+        function createObjectsArray(){
+            var numOfObject = +prompt("how many objects?");
+            var objectsArray=[];
+            for(var j=0;j<numOfObject;j++){
+                objectsArray.push(createObject())
+            }
+            return objectsArray
+        }
+        console.log(createObjectsArray());
+
+
+
+
+
+
+
+
+
+        // function createObjectsArray(){
+        //     var objectsArray =[];
+        //     for(var i=0;i<3;i++){
+        //         var myObject = {
+        //             id:i,
+        //             fName:prompt("enter first name"),
+        //             age:+prompt("enter age")
+        //         }
+        //         objectsArray.push(myObject)
+        //     }
+
+        //     return objectsArray;
+        // }
+        // var myArray = createObjectsArray()
+        // console.log(myArray);
+
+
+
+
+
+
+
+
+
+
+        // var firstUser = {
+        //     id:1,
+        //     firstName:'jacob',
+        //     lastName:"inggi",
+        //     age:67,
+        //     email:"hfcgfhj"
+        // }
+        // var secondUser = {
+        //     firstName:'avi',
+        //     lastName:"nasn",
+        //     age:23,
+        //     email:"fhghhhh"
+        // }
+        // var thirdUser = {
+        //     firstName:'yossi',
+        //     lastName:"bvc",
+        //     age:44,
+        //     email:"n,nn,n,bn,"
+        // }
+        // var usersArray = [firstUser,secondUser,thirdUser];
+        // console.log(usersArray);
+        // function printUsersArray(){
+        //     for(var i=0;i<usersArray.length;i++){
+        //         console.log(usersArray[i].firstName);
+        //     }
+        // }
+        // printUsersArray()
+
+        // function updateUser(){
+        //     var keyFromUser = prompt("key:");//"age"
+        //     var valueFromUser =prompt("value:");
+        //     if(keyFromUser=="age")
+        //     {
+        //         user[keyFromUser] = +valueFromUser;
+        //         return;
+        //     }
+        //     user[keyFromUser] = valueFromUser;
+        // }
+
+
+
+
+
+
+    //     var door = {
+    //     height:2,
+    //     width:0.5,
+    //     color:"black"
+    // }
+
+    // var keyFromUser = prompt("enter a key");
+    // console.log(door[keyFromUser]);
+    // var valueFromUser = prompt("enter new value");
+    // door[keyFromUser] = valueFromUser;
+    // console.log(door[keyFromUser]);
+    // door.opicty = 0.1;
+    // console.log(door);
 
 
 
