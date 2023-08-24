@@ -10,22 +10,44 @@
 <body>
     <script>
         //objects
-        function changeStrToArray(strParam){
-            var newArray=[];
-            var psikIndex = strParam.indexOf(",")//2
-            var startIndex = 0;
-            var tempStr;
-            while(psikIndex>0){
-                tempStr = strParam.substring(startIndex,psikIndex) //12
-                newArray.push(+tempStr);
-                startIndex = psikIndex+1;
-                psikIndex = strParam.indexOf(",",startIndex)//
-            }
-            newArray.push(+strParam.substring(startIndex));
-            return newArray;
-        }
-        var someStr = "12,3,455";
-        console.log(changeStrToArray(someStr)); 
+        var door = {
+        height:2,
+        width:0.5,
+        color:"black"
+    }
+
+    var keyFromUser = prompt("enter a key");
+    console.log(door[keyFromUser]);
+    var valueFromUser = prompt("enter new value");
+    door[keyFromUser] = valueFromUser;
+    console.log(door[keyFromUser]);
+    door.opicty = 0.1;
+    console.log(door);
+
+
+
+
+
+
+
+
+
+        // function changeStrToArray(strParam){
+        //     var newArray=[];
+        //     var psikIndex = strParam.indexOf(",")//2
+        //     var startIndex = 0;
+        //     var tempStr;
+        //     while(psikIndex>0){
+        //         tempStr = strParam.substring(startIndex,psikIndex) //12
+        //         newArray.push(+tempStr);
+        //         startIndex = psikIndex+1;
+        //         psikIndex = strParam.indexOf(",",startIndex)//
+        //     }
+        //     newArray.push(+strParam.substring(startIndex));
+        //     return newArray;
+        // }
+        // var someStr = "12,3,455";
+        // console.log(changeStrToArray(someStr)); 
 
 
 
