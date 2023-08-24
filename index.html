@@ -10,19 +10,42 @@
 <body>
     <script>
         //objects
-        function changeStringIndexEven(strParam){
-            var newString='';
-            for(var i=0;i<strParam.length;i++){
-                if(i%2==0){
-                    newString=newString + "2"
-                }
-                else{
-                    newString=newString + strParam[i]
-                }
+        function changeStrToArray(strParam){
+            var newArray=[];
+            var psikIndex = strParam.indexOf(",")//2
+            var startIndex = 0;
+            var tempStr;
+            while(psikIndex>0){
+                tempStr = strParam.substring(startIndex,psikIndex) //12
+                newArray.push(+tempStr);
+                startIndex = psikIndex+1;
+                psikIndex = strParam.indexOf(",",startIndex)//
             }
-            return newString;
+            newArray.push(+strParam.substring(startIndex));
+            return newArray;
         }
-        console.log(changeStringIndexEven("frozen"));//"f2o2e2"
+        var someStr = "12,3,455";
+        console.log(changeStrToArray(someStr)); 
+
+
+
+
+
+
+
+        // function changeStringIndexEven(strParam){
+        //     var newString='';
+        //     for(var i=0;i<strParam.length;i++){
+        //         if(i%2==0){
+        //             newString=newString + "2"
+        //         }
+        //         else{
+        //             newString=newString + strParam[i]
+        //         }
+        //     }
+        //     return newString;
+        // }
+        // console.log(changeStringIndexEven("frozen"));//"f2o2e2"
 
 
 
