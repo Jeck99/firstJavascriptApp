@@ -36,3 +36,5 @@ fnameInput.addEventListener("input", function () {
 fnameInput.addEventListener("change", function () {
     ageInput.disabled = !isFirstNameValid()
 })
+btn.style.background = "red"
+console.log(document.getElementById("btn"));
